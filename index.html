@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Home.css">
+</head>
+
+<body>
+
+  <div>
+    <div id="header">
+      <div class="header_box">
+        <div class="logo">
+          <img height="60px" src="./Material/logo.png" alt="error" onclick="chuyen_trang_home()">
+        </div>
+      </div>
+      <div class="header_box">
+        <a class="Nav_Items" ; style="font-size: 20px;" onclick="chuyen_trang_aboutus()">About us</a>
+        <a class="Nav_Items" ; style="font-size: 20px;" onclick="chuyen_trang_tour()">Tour</a>
+        <a class="Nav_Items" ; style="font-size: 20px;" onclick="chuyen_trang_popular()">Popular</a>
+        <a class="Nav_Items" ; style="font-size: 20px;" onclick="chuyen_trang_signin()">Sign in</a>
+      </div>
+    </div>
+
+
+    <script>
+      function chuyen_trang_home(){
+        window.location.assign("Home.html")
+      }
+      function chuyen_trang_aboutus(){
+        window.location.assign("About us.html")
+      }
+      function chuyen_trang_tour(){
+        window.location.assign("Tour.html")
+      }
+      function chuyen_trang_popular(){
+        window.location.assign("Popular.html")
+      }
+      function chuyen_trang_signin(){
+        window.location.assign("Sign in.html")
+      }
+    </script>
+
+
+
+
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade image1">
+        <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade image2">
+     <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>   
+      </div>
+
+      <div class="mySlides fade image3">
+        <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade image4">
+        <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade image5">
+        <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade image6">
+        <div class="hero-text">
+          <h1 style="font-size:50px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <div class="mySlides fade image7">
+        <div class="hero-text">
+          <h1 style="font-size:80px">AHAHA</h1>
+          <p>Khám phá thế giới cùng AHAHA</p>
+          <button type="submit" onclick="chuyen_trang_signin()">Travel now</button>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+      </div>
+    </div>
+    <br>
+
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 9000);
+      }
+    </script>
+    <!-- booking -->
+     <div class="booking_box">
+      <form>
+        <div class="form">
+          <div class="label"><p>HỌ TÊN</p></div>
+          <div class="input"><input type="text" placeholder="NHẬP TÊN CỦA BẠN"></div>
+        </div>
+        <div class="form">
+          <div class="label"><p>SỐ ĐIỆN THOẠI</p></div>
+          <div class="input"><input type="text" placeholder="NHẬP SỐ ĐIỆN THOẠI"></div>
+        </div>
+        <div class="form">
+          <div class="label"><p>EMAIL</p></div>
+          <div class="input"><input type="email" placeholder="NHẬP EMAIL CỦA BẠN"></div>
+        </div>
+        <div class="form">
+          <div class="label"><p>MÃ TOUR</p></div>
+          <div class="input"><input type="text" placeholder="NHẬP MÃ TOUR CỦA BẠN"></div>
+        </div>
+        <div class="form">
+          <div class="label"><p>NGÀY KHỞI HÀNH</p></div>
+          <div class="input"><input type="date" placeholder="NHẬP NGÀY KHỞI HÀNH"></div>
+        </div>
+        <div class="form">
+          <div class="label"><p>ĐẶT TOUR</p></div>
+          <button type="button">BOOK NOW</button>
+        </div>
+    </form>
+     </div>
+
+    <!-- information -->
+     <div class="welcome-contain">
+      <div class="welcome">
+        <div>
+          <h1 style="color: #374853;">Chào Mừng Đến Với Ahaha Travel!</h1>
+        <hr style="background-color: #374853;">
+        <p>Chào mừng bạn đến với Ahaha Travel, nơi bắt đầu mọi
+           hành trình khám phá tuyệt vời! Chúng tôi tự hào là người 
+           bạn đồng hành đáng tin cậy của bạn trên mọi nẻo đường, 
+           từ những kỳ nghỉ thư 
+          giãn đến những chuyến phiêu lưu đầy thách thức.</p>
+        <p>Tại Ahaha Travel, chúng tôi không chỉ tổ chức các chuyến đi,
+           mà còn tạo ra những trải nghiệm đáng nhớ. Với đội ngũ chuyên
+            gia nhiệt huyết và giàu kinh nghiệm, chúng tôi luôn nỗ lực 
+            mang đến cho bạn những dịch vụ tốt nhất, 
+          những điểm đến thú vị và những kỷ niệm khó quên.</p>
+        <p>Dù bạn đang mơ ước về một kỳ nghỉ xa hoa, một cuộc 
+          phiêu lưu mạo hiểm, hay một chuyến đi khám phá văn hóa 
+          độc đáo, chúng tôi đều có thể biến giấc mơ của bạn thành
+           hiện thực. Hãy để Ahaha Travel đưa bạn đến những vùng đất
+            mới, khám phá những nét đẹp tiềm ẩn và
+           trải nghiệm những khoảnh khắc tuyệt vời cùng gia đình và bạn bè.</p>
+        <p>Khám phá thế giới cùng Ahaha Travel - nơi mỗi hành trình bắt đầu bằng một nụ cười!</p>
+        </div>
+        <!-- <div>
+          <video src="./Material/y2mate.com - 4K Forest  Cinematic Forest  4K Nature Video Ultra HD_1440p.mp4"></video>
+        </div> -->
+      </div>
+     </div>
+
+
+    <h1 style="text-align: center; color: rgb(8, 131, 149); padding-top: 40px ;">VÌ SAO BẠN NÊN CHỌN CHÚNG TÔI</h1>
+
+    <div class="why">
+
+      <div class="first">
+        <div class="pic">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAlfQm2VsxeAwuDmb8j2kIxiizPNDfBumSbg&s" alt="">
+        </div>
+        <div class="words">
+          <ul>
+            <li>
+              <p><b>Chất lượng dịch vụ cao cấp:</b> </p>
+              <span>Chúng tôi cam kết mang đến dịch vụ chất lượng cao với 
+                sự chú trọng đến từng chi tiết nhỏ nhất.
+                 Sự hài lòng của khách hàng là ưu tiên hàng đầu của chúng tôi.</span>    
+            </li>
+            <li>
+              <p><b>Kinh nghiệm và chuyên môn</b></p>
+              <span>Chúng tôi tự hào về dịch vụ khách hàng xuất sắc, 
+                luôn lắng nghe và hỗ trợ khách hàng kịp thời. Sự hài lòng và niềm tin 
+                của khách hàng là động lực để chúng tôi không ngừng cải tiến.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="why">
+      <div class="second">
+
+        <div class="words">
+          <ul>
+            <li>
+              <p><b>Hỗ Trợ 24/7 và Cam Kết Bền Vững: </b></p>
+              <span>Hỗ trợ khách hàng mọi lúc, mọi nơi và cam 
+                kết du lịch bền vững, tôn trọng môi trường và cộng đồng địa phương.</span>    
+            </li>
+            <li>
+              <p><b>Chất Lượng và Giá Trị</b> </p>
+              <span>Cam kết dịch vụ chất lượng cao với giá cạnh
+                 tranh, hợp tác với các đối tác uy tín để mang lại trải nghiệm tốt nhất.</span>    
+            </li>
+          </ul>
+        </div>
+        <div class="pic">
+
+          <img src="https://www.salesbook.com/wp-content/uploads/2023/02/8-nawyko%CC%81w-sprzedawcy-scaled.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <!-- hot -->
+     <div class="uu_dai-box" style="background-color: #f5f3f0;">
+      <h1 style="text-align: center; color: rgb(8, 131, 149);padding-top: 100px; ">ƯU ĐÃI ĐẶC BIỆT</h1>
+      <div class="special_infor" style="padding-bottom: 100px;">
+        <div class="Specialin4">
+          <a href="">
+            <img style="width: 300px; padding: 20px;" src="./Material/special 1.jpg">
+          </a>
+        </div>
+        <div class="Specialin4">
+          <a href="">
+            <img style="width: 300px; padding: 20px;" src="./Material/special 2.jpg">
+          </a>
+        </div>
+        <div class="Specialin4">
+          <a href="">
+            <img style="width: 300px; padding: 20px;" src="./Material/special 3.jpg">
+          </a>
+
+        </div>
+        <div class="Specialin4">
+          <a href="">
+            <img style="width: 300px; padding: 20px;" src="./Material/special 4.jpg">
+          </a>
+        </div>
+      </div>
+     </div>
+
+     <!-- tour -->
+      <div class="linktotour">
+        <div class="linktotourinfor">
+          <h1 style="color: white;">TOUR!</h1>
+          <p>Khám phá những tour du lịch độc đáo và hấp dẫn.</p>
+          <button type="submit" onclick="chuyen_trang_tour()">Fly now!</button>
+        </div>
+      </div>
+
+
+
+     <!-- đăng kí -->
+      <div style="background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA3L2Rlc2lnbndpdGhtZTA5X3JlYWxpc3RpY193aWRlX2FuZ2xlX3NpbXBsZV9mbGF0X3ZlY3Rvcl9pbGx1c3RyYV8zZTJiZTQ4NC1iNzQ2LTQzYjAtODAxNy00MTkxZDJlNGJiYmRfMS5qcGc.jpg);">
+        <h1 style="padding: 30px; text-align: center; color: #088395;">ĐĂNG KÍ ĐỂ NHẬN NGAY ƯU ĐÃI!!!</h1>
+        <div class="container" style="margin-top: 20px; margin-bottom: 100px;">
+          <h2 style="color: #071952;"><b>SIGN IN</b></h2>
+          <form>
+              <input type="text" placeholder="Username" required>
+              <input type="email" placeholder="Email" required>
+              <input type="number" placeholder="Phone Number">
+              <input type="password" placeholder="Password" required>
+              <button type="submit">Sign In</button>
+          </form>
+          <div class="register">
+              Don't have an account? <a href="#">Register here</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- fouter -->
+
+    <div class="fouter">
+      <div style="text-align: center;" class="fouter_informations">
+        <a href="">
+          <img style="margin-top: 60px;" src="./Material/logo.png" width="50%">
+        </a>
+
+        <div class="link">
+          <div class="social_link">
+            <a href="https://www.facebook.com/profile.php?id=100055246839982">
+              <img style="width: 40px;" src="./Material/2.png">
+            </a>
+          </div>
+
+          <hr class="vertical_line">
+
+          <div class="social_link">
+            <a href="https://www.instagram.com/phedorus_0w0/">
+              <img style="width: 40px;" src="./Material/1.png">
+            </a>
+          </div>
+
+          <hr class="vertical_line">
+
+          <div class="social_link">
+            <a href="https://mail.google.com/mail/">
+              <img style="width: 40px;" src="./Material/3.png">
+            </a>
+          </div>
+
+            <hr class="vertical_line">
+
+          <div class="social_link">
+            <a href="https://www.youtube.com/">
+              <img style="width: 43px;" src="./Material/5.png">
+            </a>
+          </div>
+
+        </div>
+        <hr style="width: 60%; height: 1px; 
+        background-color: #EBF4F6; 
+        padding: none; border: none;">
+
+        <div class="contact">
+          <div>
+            <img style="width: 35px;" src="./Material/4.png">
+          </div>
+          <div style="padding: 10px 60px 15px 10px; font-size: 25px;">
+            <span style="color: yellow;"><b>Hotline: </b> </span>
+            <span>0936727753</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="display: flex;">
+        <div class="fouter_informations">
+            <h2>About us</h2>
+            <hr>
+  
+            <a onclick="chuyen_trang_aboutus()">
+              Về AHAHA
+            </a>
+            <a onclick="chuyen_trang_popular()">
+              Chính sách bảo mật
+            </a>
+            <a onclick="chuyen_trang_popular()">
+              Cam kết chất lượng
+            </a>
+            <a onclick="chuyen_trang_popular()">
+              Liên hệ
+            </a>
+        </div>
+        <div class="fouter_informations">
+            <h2>Tour</h2>
+            <hr>
+            <a onclick="chuyen_trang_tour()">
+              Trong nước
+            </a>
+            <a onclick="chuyen_trang_tour()">
+              Nước ngoài
+            </a>
+        </div>
+        <div class="fouter_informations">
+            <h2>Địa chỉ</h2>
+            <hr>
+            <ul>
+              <li>
+                <b>Tại TPHCM:</b>
+              </li>
+            </ul>
+            <p>CN1: 123 Đường Hoa Sen, Phường 7, Quận 3, TP. HCM</p>
+            <p>CN2: 789 Đường Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TP. HCM</p>
+            <p>CN3: 101 Đường Lê Lợi, Phường Bến Thành, Quận 1, TP. HCM</p>
+            <p>CN4: 303 Đường Phạm Văn Đồng, Phường Hiệp Bình Chánh, Quận Thủ Đức, TP. HCM</p>
+            <p>CN5: 404 Đường Đinh Tiên Hoàng, Phường 1, Quận Bình Thạnh, TP. HCM</p>
+            <p>CN6: 505 Đường Lạc Long Quân, Phường 10, Quận Tân Bình, TP. HCM</p>
+            <p>CN7: 606 Đường Nguyễn Thị Minh Khai, Phường 2, Quận 3, TP. HCM</p>
+            <ul>
+              <li>
+                <b>Tại Hà Nội</b>
+              </li>
+            </ul>
+            <p>CN8: 456 Đường Trần Phú, Phường Láng Hạ, Quận Đống Đa, Hà Nội</p>
+            <p>CN9: 202 Đường Cầu Giấy, Phường Quan Hoa, Quận Cầu Giấy, Hà Nội</p>
+            <p>CN10: 707 Đường Hoàng Quốc Việt, Phường Nghĩa Đô, Quận Cầu Giấy, Hà Nội</p>
+        </div>
+      </div>
+     
+    
+  </div>
+</body>
+</html>

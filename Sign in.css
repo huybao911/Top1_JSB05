@@ -1,0 +1,78 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(https://suachualaptop24h.com/upload_images/images/2021/05/02/2561184c0d83292e2814a8db5dfe49e1.jpg);
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+/* header and fouter */
+#header{
+  display: flex;
+  background-color: #071952;
+  height: 80px;
+  color: #EBF4F6;
+  justify-content: space-between;
+}
+.header_box{
+  display: flex;
+  padding: 10px 50px 10px 50px;
+}
+.Nav_Items{
+  color: white;
+  text-decoration: none;
+  padding: 18px;
+}
+
+
+/* signin */
+
+.container {
+  margin: auto;
+  background-color: #DAD3BE;
+  padding: 120px;
+  border-radius: 8px;
+  width: 450px;
+}
+.container{
+  margin: auto;
+  background-color: #DAD3BE;
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+  text-align: center;
+}
+  .container input {
+  width: 85%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container button {
+  width: 20%;
+  padding: 10px;
+  background-color: #088395;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container button:hover {
+  background-color: #071952;
+}
+.container .register {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.container .register a {
+  color: #088395;
+  text-decoration: none;
+}
+.container .register a:hover {
+  text-decoration: underline;
+}
